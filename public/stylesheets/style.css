@@ -1,0 +1,90 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#d3-fun {
+	margin-top: -50px;
+	margin-left: -50px;
+	margin-right: -50px;
+	height: 200px;
+	background-color: #ebf7f6;
+}
+
+.add-remove-buttons {
+	margin-top: 25px;
+}
+
+.form-inputs {
+	margin-bottom: 10px;
+}
+
+.contain {
+	border-top: dotted #173e43 4px;
+	margin-left: -50px;
+	margin-right: -50px;
+}
+
+.btn {
+	background-color: #3fb0ac !important;
+	color: #173e43 !important;
+	letter-spacing: 3px !important;
+}
+
+.btn:visited, .btn:hover {
+  outline: none !important;
+
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px #24dbba;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid black;
+}
+
+input[type=number]:focus {
+  box-shadow: 0 0 5px #24dbba;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid black;
+}
+
+.colors {
+	margin-bottom: 15px;
+/*	padding-left:30px;*/
+}
+.color-option1, .color-option2, .color-option3, .color-option4, .color-option5 {
+	height:30px;
+	width:30px;
+	border-radius:15px;
+	margin-top: 5px;
+}
+
+.color-option1 {
+	background-color: #f8d965;
+}
+
+.color-option2 {
+	background-color: salmon;
+}
+
+.color-option3 {
+	background-color: #3fb0ac;
+}
+
+.color-option4 {
+	background-color: #bbc4ef;
+}
+
+.color-option5 {
+	background-color: orange;
+}
+
+.title {
+	font-size: 3em;
+	font-family: 'Arvo';
+	color: #173e43;
+}
