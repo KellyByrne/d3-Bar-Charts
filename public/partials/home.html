@@ -1,58 +1,58 @@
 <div class="row contain"></div>
 <div class="container">
-	<h3 class="text-center">Create a Bar Chart with your Custom Data</h3>
-	<form>
-		<div class="row form-inputs">
-			<div class="col-md-6 col-md-offset-3">
-				<label>Graph Title</label>
-				<input type="text" ng-model="title" class="form-control" placeholder="Enter label" required>
-			</div>
-		</div>
-		<div class="row form-inputs">
-			<div class="col-md-3 col-md-offset-3">
-				<label>Name of Labels Group</label>
-				<input type="text" ng-model="xAxisName" class="form-control" placeholder="Enter name" required>
-			</div>
-			<div class="col-md-3">
-				<label>Name of Values Group</label>
-				<input type="text" ng-model="yAxisName" class="form-control" placeholder="Enter name"required>
-			</div>
-		</div>
-		<div class="row form-inputs" ng-repeat="input in customData">
-			<div class="col-md-3 col-md-offset-3">
-				<label ng-show='$first'>Label</label>
-				<input type="text" ng-model='input.label1' class="form-control" placeholder="Enter label" required>
-			</div>
-			<div class="col-md-3">
-				<label ng-show='$first'>Value</label>
-				<input type="number" ng-model='input.value1' class="form-control" placeholder="Enter value" required>
-			</div>
-			<div class="col-md-2 add-remove-buttons">
-				<button ng-show='$last' class="btn" ng-click="removeInput()"><i class="fa fa-minus"></i></button>
-		    <button ng-show='$last' ng-click='addInput()' type="button" class="btn"><i class="fa fa-plus"></i></button>
-		  </div>
-		</div>
-		<div class="row colors">
-				<label class="col-md-offset-4">Color Selection</label>
-				<button class="color-option1" ng-click="chosenColor('#f8d965', '#fae596')"></button>
-				<button class="color-option2" ng-click="chosenColor('salmon', 'indianred')"></button>
-				<button class="color-option3" ng-click="chosenColor('#3fb0ac', '#2c7b78')"></button>
-				<button class="color-option4" ng-click="chosenColor('#bbc4ef', '#a8b0d7')"></button>
-				<button class="color-option5" ng-click="chosenColor('orange', '#e05038')"></button>
-		</div>
-		<div class="row">
-			<button type="submit" ng-click="createBarChart()" class="btn col-md-2 col-md-offset-5">Create</button>
-		</div>
-	</form>
-	<div ng-show="graph" class="row">
-		<div class="row">
-			<h1 class="col-md-8 col-md-offset-2 text-center">{{title}}</h1>
-		</div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2" id="chart"></div>
-		</div>
-		<div class="row">
-			<h3 class="col-md-8 col-md-offset-2 text-center">{{xAxisName}}</h3>
-		</div>
-	</div>
+  <h3 class="text-center">Create a Bar Chart with your Custom Data</h3>
+  <form>
+    <div class="row form-inputs">
+      <div class="col-md-6 col-md-offset-3">
+        <label>Graph Title</label>
+        <input type="text" ng-model="title" class="form-control" placeholder="Enter label" required>
+      </div>
+    </div>
+    <div class="row form-inputs">
+      <div class="col-md-3 col-md-offset-3">
+        <label>Name of Labels Group</label>
+        <input type="text" ng-model="xAxisName" class="form-control" placeholder="Enter name" required>
+      </div>
+      <div class="col-md-3">
+        <label>Name of Values Group</label>
+        <input type="text" ng-model="yAxisName" class="form-control" placeholder="Enter name"required>
+      </div>
+    </div>
+    <div class="row form-inputs" ng-repeat="input in customData">
+      <div class="col-md-3 col-md-offset-3">
+        <label ng-show='$first'>Label</label>
+        <input type="text" ng-model='input.label1' class="form-control" placeholder="Enter label" required>
+      </div>
+      <div class="col-md-3">
+        <label ng-show='$first'>Value</label>
+        <input type="number" ng-model='input.value1' class="form-control" placeholder="Enter value" required>
+      </div>
+      <div class="col-md-2 add-remove-buttons">
+        <button ng-show='$last' class="btn" ng-click="removeInput()"><i class="fa fa-minus"></i></button>
+        <button ng-show='$last' ng-click='addInput()' type="button" class="btn"><i class="fa fa-plus"></i></button>
+      </div>
+    </div>
+    <div class="row colors">
+        <label class="col-md-offset-4">Color Selection</label>
+        <button class="color-option1" ng-click="chosenColor('#f8d965', '#fae596')"></button>
+        <button class="color-option2" ng-click="chosenColor('salmon', 'indianred')"></button>
+        <button class="color-option3" ng-click="chosenColor('#3fb0ac', '#2c7b78')"></button>
+        <button class="color-option4" ng-click="chosenColor('#bbc4ef', '#a8b0d7')"></button>
+        <button class="color-option5" ng-click="chosenColor('orange', '#e05038')"></button>
+    </div>
+    <div class="row">
+      <button type="submit" ng-click="createBarChart()" class="btn col-md-2 col-md-offset-5">Create</button>
+    </div>
+  </form>
+  <div ng-show="graph" class="row">
+    <div class="row">
+      <h1 class="col-md-8 col-md-offset-2 text-center">{{title}}</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2" id="chart"></div>
+    </div>
+    <div class="row">
+      <h3 class="col-md-8 col-md-offset-2 text-center">{{xAxisName}}</h3>
+    </div>
+  </div>
 </div>
