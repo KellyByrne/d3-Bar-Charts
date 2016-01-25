@@ -88,3 +88,12 @@ input[type=number]:focus {
   font-family: 'Arvo';
   color: #173e43;
 }
+
+.rotate {
+  margin-top: 250px;
+  display:inline-block;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
