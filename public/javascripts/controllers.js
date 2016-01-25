@@ -51,12 +51,20 @@ app.controller('HomeCtrl', ['$scope', '$http', '$location', function($scope, $ht
           .scale(y)
           .orient("left")
 
+      var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>" + $scope.yAxisName + ":</strong> <span>" + d.values + "</span>";
+        })
+
       var svg = d3.select("#chart").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+      svg.call(tip);
 
       x.domain(inputs.map(function(d) { return d.labels; }));
       y.domain([0, d3.max(inputs, function(d) { return d.values; })]);
@@ -84,14 +92,17 @@ app.controller('HomeCtrl', ['$scope', '$http', '$location', function($scope, $ht
           .attr("y", function(d) { return y(d.values); })
           .attr("height", function(d) { return height - y(d.values); })
           .attr("fill", $scope.yourColor)
-          .on("mouseover", function() {
+          .on("mouseover", function(d) {
+            tip.show(d);
             d3.select(this)
               .attr("fill", $scope.mouseOverColor);
           })
-          .on("mouseout", function(){
+          .on("mouseout", function(d){
+            tip.hide(d);
             d3.select(this)
               .attr("fill", $scope.yourColor)
           })
+
 
       function type(d) {
         d.values = +d.values;
